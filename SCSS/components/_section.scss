@@ -1,0 +1,49 @@
+.section {
+//    background: black;
+
+    
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 2em;
+        text-align: center;
+        font-size: 1.3rem;
+        line-height: 1.6;
+        border: solid 1px red;
+    }
+
+    &__header {
+        color: $color-yellow;
+        font-size: 3rem
+    }
+
+    &__text {
+        // color: $color-white;
+    }
+
+    &__services {
+        padding: 2em 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        border: solid 1px red;
+    }
+
+    &__work {
+
+    }
+
+    &__work h1 {
+        text-align: center;
+    }
+
+    &__contact {
+
+    }
+
+    &__contact h1 {
+        text-align: center;
+    }
+}

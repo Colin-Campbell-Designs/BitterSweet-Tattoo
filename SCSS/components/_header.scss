@@ -1,0 +1,36 @@
+.header {
+        height: 100vh;
+}
+
+.video-container {
+    height: 100vh;
+    background: linear-gradient(90deg,rgba(0,0,0,.75) 50%);
+    position: relative;
+}
+
+.video-container video {
+    mix-blend-mode: overlay;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    object-position: center;
+}
+
+.header__logoBox {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    max-width: 80em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__logo {
+        min-width: 100%;
+    }
+}

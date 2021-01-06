@@ -1,0 +1,70 @@
+.nav {
+    width: 100%;
+    padding: 1em ;
+    position: fixed;
+    z-index: 10;
+    // background-image: linear-gradient(to bottom, white, transparent);
+    background: white;
+    color: $color-yellow;
+
+    &__logoBox {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 5em;
+        margin: 0 .5em;
+    }
+
+    &__logo-text {
+        font-size: 1.75rem;
+    }
+
+    &__list {
+        display: flex;
+        color: white;
+    }
+
+    &__item {
+        margin: 0 1em;
+        padding:0 .5em ;
+        font-size: 1.2rem;
+        position: relative;
+        color: white;
+    }
+
+    &__item a::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 0%;
+        width: 100%;
+        transform: scale(0);
+        background: $color-yellow;
+        transition: .5s ease;
+    }
+
+    &__item a:hover::before {
+        height: 10%;
+        transform: scale(1.1);
+    }
+
+    &__social {
+        display: flex;
+    }
+
+    &__social i {
+        font-size: 3em;
+        margin: .2em;
+        transition: .5s ease;
+    }
+
+    &__social i:hover,
+    &__social i:hover {
+        transform: scale(1.2);
+        color: $color-yellow;
+    }
+}
+
