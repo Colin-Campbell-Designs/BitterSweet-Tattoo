@@ -174,6 +174,13 @@ img {
   color: #ffff;
   border: solid 1px #ffff;
   font-size: 1.3rem;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.btn__header:hover {
+  background: #ffff;
+  color: black;
 }
 
 .header {
@@ -315,6 +322,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-image: url("/Images/");
 }
 
 .form__label {
@@ -337,7 +345,8 @@ img {
   display: grid;
   -ms-grid-columns: (minmax(30em, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
-  grid-auto-rows: minmax(20em, auto);
+  grid-auto-rows: minmax(1fr, 10em);
+  gap: 1rem;
   grid-auto-flow: dense;
 }
 
