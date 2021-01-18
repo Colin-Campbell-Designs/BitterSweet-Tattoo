@@ -83,11 +83,10 @@ img {
 
 .nav {
   width: 100%;
-  padding: 1em;
+  padding: 2em;
   position: fixed;
   z-index: 10;
-  background: white;
-  color: #EFC30A;
+  background-image: transparent;
 }
 
 .nav__logoBox {
@@ -106,16 +105,16 @@ img {
 
 .nav__logo-text {
   font-size: 1.75rem;
+  color: #EFC30A;
 }
 
 .nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: white;
 }
 
-.nav__item {
+.nav__item a {
   margin: 0 1em;
   padding: 0 .5em;
   font-size: 1.2rem;
@@ -154,6 +153,7 @@ img {
   margin: .2em;
   -webkit-transition: .5s ease;
   transition: .5s ease;
+  color: #ffff;
 }
 
 .nav__social i:hover,
@@ -161,6 +161,11 @@ img {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   color: #EFC30A;
+}
+
+.scroll {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, black), to(transparent));
+  background-image: linear-gradient(to bottom, black 20%, transparent);
 }
 
 .btn {
@@ -208,11 +213,11 @@ img {
   position: absolute;
   height: 100%;
   width: 100%;
-  max-width: 80em;
+  max-width: 70em;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -44%);
+          transform: translate(-50%, -44%);
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -348,6 +353,10 @@ img {
   grid-auto-rows: minmax(1fr, 10em);
   gap: 1rem;
   grid-auto-flow: dense;
+}
+
+.span2-col {
+  grid-column: span 2;
 }
 
 .grid-2 {

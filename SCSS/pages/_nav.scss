@@ -1,11 +1,10 @@
 .nav {
     width: 100%;
-    padding: 1em ;
+    padding: 2em;
     position: fixed;
     z-index: 10;
-    // background-image: linear-gradient(to bottom, white, transparent);
-    background: white;
-    color: $color-yellow;
+    background-image: transparent;
+
 
     &__logoBox {
         display: flex;
@@ -19,19 +18,20 @@
 
     &__logo-text {
         font-size: 1.75rem;
+        color: $color-yellow;
     }
 
     &__list {
         display: flex;
-        color: white;
     }
 
-    &__item {
+    &__item a{
         margin: 0 1em;
         padding:0 .5em ;
         font-size: 1.2rem;
         position: relative;
         color: white;
+        
     }
 
     &__item a::before {
@@ -59,6 +59,7 @@
         font-size: 3em;
         margin: .2em;
         transition: .5s ease;
+        color: $color-white;
     }
 
     &__social i:hover,
@@ -67,4 +68,10 @@
         color: $color-yellow;
     }
 }
+
+.scroll {
+    background-image: linear-gradient(to bottom, black 20%, transparent);
+}
+
+
 
