@@ -46,4 +46,9 @@
     &__contact h1 {
         text-align: center;
     }
+
+    &__contact {
+        background: url('/Images/form_bg.jpg');
+        background-size: cover;
+    }
 }

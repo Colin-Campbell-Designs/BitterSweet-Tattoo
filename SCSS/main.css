@@ -188,6 +188,13 @@ img {
   color: black;
 }
 
+.btn--submit {
+  margin-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .header {
   height: 100vh;
 }
@@ -287,6 +294,11 @@ img {
   text-align: center;
 }
 
+.section__contact {
+  background: url("/Images/form_bg.jpg");
+  background-size: cover;
+}
+
 .card {
   border: solid 1px green;
   display: -webkit-box;
@@ -316,6 +328,16 @@ img {
   font-size: 1.3rem;
 }
 
+.contact__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.empty {
+  width: 45%;
+}
+
 .form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -327,21 +349,38 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url("/Images/");
-}
-
-.form__label {
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  margin-top: 2.5em;
-  width: 80%;
+  width: 50%;
+  padding-right: 1em;
+  background-image: -webkit-gradient(linear, bottom 180deg, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2)));
+  background-image: linear-gradient(to bottom 180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 }
 
 .form__input {
-  width: 80%;
+  width: 100%;
   border: none;
-  border-bottom: 1px solid black;
   margin-top: 1em;
+  border-bottom: 1px solid grey;
+  background: transparent;
+  outline: transparent;
+  padding: 1.2em;
+  position: relative;
+  color: #ffff;
+}
+
+.form__input::-webkit-input-placeholder {
+  color: #EFC30A;
+}
+
+.form__input:-ms-input-placeholder {
+  color: #EFC30A;
+}
+
+.form__input::-ms-input-placeholder {
+  color: #EFC30A;
+}
+
+.form__input::placeholder {
+  color: #EFC30A;
 }
 
 .img-container {
