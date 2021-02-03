@@ -14,6 +14,7 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
+  background: radial-gradient(ellipse at top, black 60%, transparent), radial-gradient(ellipse at bottom, black 60%, transparent);
 }
 
 ul {
@@ -168,6 +169,34 @@ img {
   background-image: linear-gradient(to bottom, black 20%, transparent);
 }
 
+.footer {
+  color: #ffff;
+}
+
+.footer__googlemap {
+  height: 20em;
+  border: solid hotpink 2px;
+}
+
+.footer__container {
+  width: 100%;
+  max-width: 110em;
+  border: solid greenyellow 2px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__contact {
+  border: solid greenyellow 2px;
+  width: 50%;
+}
+
+.footer__nav-link {
+  color: red;
+}
+
 .btn {
   padding: 1em 2em;
   border: none;
@@ -193,6 +222,11 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: transparent;
+  border: 2px solid #EFC30A;
+  color: #ffff;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 .header {
@@ -245,6 +279,11 @@ img {
   min-width: 100%;
 }
 
+.section {
+  background: black;
+  color: #ffff;
+}
+
 .section__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -294,11 +333,6 @@ img {
   text-align: center;
 }
 
-.section__contact {
-  background: url("/Images/form_bg.jpg");
-  background-size: cover;
-}
-
 .card {
   border: solid 1px green;
   display: -webkit-box;
@@ -329,9 +363,13 @@ img {
 }
 
 .contact__container {
+  background: url("/Images/form_bg.jpg");
+  background-position: center;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 10em;
 }
 
 .empty {
@@ -350,9 +388,8 @@ img {
       -ms-flex-align: center;
           align-items: center;
   width: 50%;
-  padding-right: 1em;
-  background-image: -webkit-gradient(linear, bottom 180deg, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2)));
-  background-image: linear-gradient(to bottom 180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  padding: 1em;
+  background: #000000;
 }
 
 .form__input {

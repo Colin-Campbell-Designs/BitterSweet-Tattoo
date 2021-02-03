@@ -1,5 +1,6 @@
 .section {
-//    background: black;
+   background: black;
+   color: $color-white;
 
     
     &__content {
@@ -39,16 +40,7 @@
         text-align: center;
     }
 
-    &__contact {
-
-    }
-
     &__contact h1 {
         text-align: center;
-    }
-
-    &__contact {
-        background: url('/Images/form_bg.jpg');
-        background-size: cover;
     }
 }

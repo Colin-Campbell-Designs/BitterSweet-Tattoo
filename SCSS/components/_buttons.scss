@@ -20,6 +20,12 @@
     &--submit {
         margin-top: 2em;
         display: flex;
+        background: transparent;
+        border: 2px solid $color-yellow;
+        color: $color-white;
+        transition: all .5s ease;
+
+        
     }
 }
 

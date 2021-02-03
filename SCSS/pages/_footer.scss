@@ -1,0 +1,40 @@
+.footer {
+    color: $color-white;
+
+    &__googlemap {
+        height: 20em;
+        border: solid hotpink 2px;
+    }
+
+    &__container {
+        width: 100%;
+        max-width: 110em;
+        border: solid greenyellow 2px;
+        margin: 0 auto;
+
+        display: flex;
+    }
+
+    &__contact {
+        border: solid greenyellow 2px;
+        width: 50%;
+    }
+
+    &__nav {
+        
+    }
+
+    &__nav-list {
+        
+    }
+
+    &__nav-item {
+       
+    }
+
+    &__nav-link {
+        color: red;
+    }
+
+
+}

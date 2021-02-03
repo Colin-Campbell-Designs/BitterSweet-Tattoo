@@ -1,6 +1,10 @@
 
 .contact__container {
-    display: flex;
+        background: url('/Images/form_bg.jpg');
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        margin-bottom: 10em;
 }
 
 .empty {
@@ -13,8 +17,9 @@
     flex-direction: column;
     align-items: center;
     width: 50%;
-    padding-right: 1em;
-    background-image: linear-gradient(to bottom 180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    padding: 1em;
+    background: $color-black;
+    
 
     &__input {
         width: 100%;
