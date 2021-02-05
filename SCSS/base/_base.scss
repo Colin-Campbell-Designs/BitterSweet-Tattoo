@@ -7,16 +7,19 @@
 }
 
 html {
-    font-size: 62.5% //font-size 10px
+    font-size: 62.5%;//font-size 10px
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
-    background: radial-gradient(ellipse at top, black 60%, transparent),
-            radial-gradient(ellipse at bottom, black 60%, transparent);
+    background-image: url('/Images/body_bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-
 ul {
     list-style: none;
 }
