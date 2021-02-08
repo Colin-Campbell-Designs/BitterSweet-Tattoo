@@ -1,0 +1,33 @@
+.modal {
+    height: 100vh;
+    width: 100vw;
+    background: rgba($color: #000000, $alpha: .6);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+   display: none;
+    
+  
+    &__img-container {
+       background: $color-black;
+       height: 80em;
+       width: 80em;
+       position: relative;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+
+       img {
+          height: 100%;
+          width: 100%;
+           object-fit: contain;
+       }
+    }
+
+    &__close i {
+        color: $color-white;
+        font-size: 4rem;
+        padding: .5em;
+    }
+}
+

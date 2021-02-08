@@ -1,44 +1,74 @@
 .btn {
-    padding: 1em 2em;
-    border: none;
-    border-radius: .3em;
-    
-    &__header {
-        margin-top: 2em;
-        color: $color-white;
-        border: solid 1px $color-white;
-        font-size: 1.3rem;
-        position: relative;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 0.3em;
 
-        transition:  .5s ease;
+  &__header {
+    margin-top: 2em;
+    color: $color-white;
+    border: solid 1px $color-white;
+    font-size: 1.3rem;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+      cursor: pointer;
+      color: $color-black;
     }
 
-    &__header::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 0%;
-
-
-        
-
-        &::before:hover {
-           
-            width: 100%;
-        }
+    &::before {
+      content: "";
+      position: absolute;
+      color: $color-black;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0%;
+      background-color: $color-white;
+      z-index: -1;
     }
 
-    &--submit {
-        margin-top: 2em;
-        display: flex;
-        background: transparent;
-        border: 2px solid $color-yellow;
-        color: $color-white;
-        transition: all .5s ease;
-
-        
+    &:hover::before {
+      transition: all 0.3s ease;
+      width: 100%;
+      
     }
+  }
 }
 
+.btn--submit {
+    background: transparent;
+    margin-top: 2em;
+    color: $color-white;
+    border: solid 2px $color-yellow;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    outline: none;
+        
+    
+        &:hover {
+          cursor: pointer;
+          color: $color-black;
+        }
+    
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 0%;
+          background-color: $color-yellow;
+          color: $color-black;
+          z-index: -1;
+        }
+    
+        &:hover::before {
+          transition: all 0.3s ease;
+          width: 100%;
+          color: $color-black;
+          
+        }
+}

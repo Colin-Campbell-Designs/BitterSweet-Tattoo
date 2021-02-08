@@ -5,6 +5,8 @@
     z-index: 10;
     background-image: transparent;
 
+    transition: all 1s;    
+
 
     &__logoBox {
         display: flex;
@@ -69,8 +71,11 @@
     }
 }
 
+
+
 .scroll {
-    background-image: linear-gradient(to bottom, black 20%, transparent);
+   background-image: linear-gradient(to bottom, black 25%, transparent);
+   transition: all 1s;
 }
 
 

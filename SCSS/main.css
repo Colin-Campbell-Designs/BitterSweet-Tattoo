@@ -103,12 +103,18 @@ img {
   padding-top: 1em;
 }
 
+.padding-container {
+  padding-bottom: 2em;
+}
+
 .nav {
   width: 100%;
   padding: 2em;
   position: fixed;
   z-index: 10;
   background-image: transparent;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .nav__logoBox {
@@ -186,8 +192,10 @@ img {
 }
 
 .scroll {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, black), to(transparent));
-  background-image: linear-gradient(to bottom, black 20%, transparent);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(25%, black), to(transparent));
+  background-image: linear-gradient(to bottom, black 25%, transparent);
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .footer {
@@ -201,13 +209,12 @@ img {
 
 .footer__container {
   width: 100%;
-  height: 16em;
   max-width: 110em;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 5em;
+  margin-top: 5em;
 }
 
 .footer__contact {
@@ -227,7 +234,6 @@ img {
   height: 60%;
   width: 50%;
   font-size: 1.4rem;
-  line-height: 1.8;
 }
 
 .footer__nav {
@@ -242,9 +248,9 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .footer__nav-list {
@@ -325,10 +331,25 @@ img {
   padding: 3em 0 1.5em;
 }
 
+@media (max-width: 500px) {
+  .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .btn {
   padding: 1em 2em;
   border: none;
-  border-radius: .3em;
+  border-radius: 0.3em;
 }
 
 .btn__header {
@@ -337,33 +358,66 @@ img {
   border: solid 1px #ffff;
   font-size: 1.3rem;
   position: relative;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  z-index: 1;
+}
+
+.btn__header:hover {
+  cursor: pointer;
+  color: #000000;
 }
 
 .btn__header::before {
-  content: '';
+  content: "";
+  position: absolute;
+  color: #000000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background-color: #ffff;
+  z-index: -1;
+}
+
+.btn__header:hover::before {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.btn--submit {
+  background: transparent;
+  margin-top: 2em;
+  color: #ffff;
+  border: solid 2px #EFC30A;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  outline: none;
+}
+
+.btn--submit:hover {
+  cursor: pointer;
+  color: #000000;
+}
+
+.btn--submit::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 0%;
+  background-color: #EFC30A;
+  color: #000000;
+  z-index: -1;
 }
 
-.btn__header::before::before:hover {
+.btn--submit:hover::before {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   width: 100%;
-}
-
-.btn--submit {
-  margin-top: 2em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: transparent;
-  border: 2px solid #EFC30A;
-  color: #ffff;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  color: #000000;
 }
 
 .header {
@@ -481,8 +535,13 @@ img {
   text-align: center;
 }
 
+.section-spacer {
+  background: #000000;
+  height: 15em;
+}
+
 .card {
-  border: solid 1px green;
+  border: solid 1px #ffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -496,6 +555,14 @@ img {
   padding: 1em 1.5em;
   margin: 2em 2em 6em;
   text-align: center;
+  border-radius: .5em;
+}
+
+.card:hover {
+  -webkit-transform: translateY(-1em);
+          transform: translateY(-1em);
+  -webkit-transition: ease all .3s;
+  transition: ease all .3s;
 }
 
 .card__icon {
@@ -541,6 +608,10 @@ img {
   background: transparent;
 }
 
+.form__form-control {
+  width: 100%;
+}
+
 .form__input {
   width: 100%;
   border: none;
@@ -554,19 +625,45 @@ img {
 }
 
 .form__input::-webkit-input-placeholder {
-  color: #EFC30A;
+  color: #ffff;
 }
 
 .form__input:-ms-input-placeholder {
-  color: #EFC30A;
+  color: #ffff;
 }
 
 .form__input::-ms-input-placeholder {
-  color: #EFC30A;
+  color: #ffff;
 }
 
 .form__input::placeholder {
+  color: #ffff;
+}
+
+.form__small {
+  text-align: end;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: .2rem;
+  visibility: hidden;
   color: #EFC30A;
+}
+
+.form__form-control.sucess input {
+  color: #15d615;
+}
+
+.form__form-control.error input {
+  color: #df2210;
+}
+
+.form__form-control.error .form__small {
+  visibility: visible;
+}
+
+.form__form-control.success .form__small {
+  visibility: visible;
 }
 
 .img-container {
@@ -575,7 +672,7 @@ img {
   display: grid;
   -ms-grid-columns: (minmax(26em, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(26em, 1fr));
-  grid-auto-rows: minmax(1fr, 10em);
+  grid-auto-rows: minmax(10em, 30em);
   gap: 1rem;
   grid-auto-flow: dense;
 }
@@ -585,15 +682,66 @@ img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: ease all .5s;
+  transition: ease all .5s;
+}
+
+.gal-img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .span2-col {
   grid-column: span 2;
 }
 
+.span3-col {
+  grid-column: span 3;
+}
+
+.span2-row {
+  grid-row: span 2;
+}
+
 #map {
   height: 30em;
   padding: 10em;
+}
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  display: none;
+}
+
+.modal__img-container {
+  background: #000000;
+  height: 80em;
+  width: 80em;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.modal__img-container img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.modal__close i {
+  color: #ffff;
+  font-size: 4rem;
+  padding: .5em;
 }
 
 .grid-2 {
