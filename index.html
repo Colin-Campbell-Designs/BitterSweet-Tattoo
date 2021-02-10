@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Oswald:wght@300;400;600;700&display=swap" rel="stylesheet"> 
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPWli6zr3p8GvimWCqrWTPkrr5zfUS8ZY&callback=initMap"
+    type="text/javascript"></script>
     <link rel="stylesheet" href="SCSS/main.css">
     <title>Bittersweet Tattoo</title>
 </head>
@@ -20,11 +22,16 @@
                         <h3 class="nav__logo-text">Bittersweet tattoo</h3>
                     </div>
                 </a>
-                <ul class="nav__list">
+
+                <div class="burgerMenu">
+                    <div class="line"></div>
+                </div>
+
+                <!-- <ul class="nav__list">
                     <li class="nav__item"><a href="#shop">Shop</a></li>
                     <li class="nav__item"><a href="#services">services</a></li>
-                    <li class="nav__item"><a href="#services">Artist</a></li>
-                    <li class="nav__item"><a href="#artist">work</a></li>
+                    <li class="nav__item"><a href="#artist">Artist</a></li>
+                    <li class="nav__item"><a href="#work">work</a></li>
                     <li class="nav__item"><a href="#contact">contact</a></li>
                 </ul>
                 <ul class="nav__social">
@@ -32,7 +39,7 @@
                     <li><a href="#"><i class="fab fa-instagram-square"></a></i></li>
                     <li><a href="#"><i class="fab fa-twitter-square"></a></i></li>
                 </ul>
-            </div>  
+            </div>   -->
         </nav>
 
    <header class="header" id="header">
@@ -139,7 +146,7 @@
                    </div>
 
                     <div class="form__form-control">
-                        <input id="email" class="form__input" type="email" name="email" placeholder="Email">
+                        <input id="email" class="form__input" type="text" name="email" placeholder="Email">
                         <div class="form__small"></div>
                     </div>
 
@@ -149,7 +156,7 @@
                     </div>
 
                     <div class="form__form-control">
-                        <textarea id="message" class="form__input" name="text"  id="messageArea" cols="30" rows="10" placeholder="Please leave us a message"></textarea>
+                        <textarea id="message" class="form__input" name="text" cols="30" rows="10" placeholder="Please leave us a message"></textarea>
                         <div class="form__small"></div>
                     </div>
 
@@ -203,13 +210,26 @@
 <div class="modal">
     <div class="modal__close"><a href="#"><i class="fas fa-times"></i></a></div>
     <div class="modal__img-container">
-        
-        
     </div>
 </div>
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPWli6zr3p8GvimWCqrWTPkrr5zfUS8ZY&callback=initMap"
-    type="text/javascript"></script>
+<div class="navResponsive">
+        <div class="navResponsive__container">
+            <ul class="navResponsive__list">
+                <li class="navResponsive__item"><a href="#shop" class="navResponsive__link">Shop</a></li>
+                <li class="navResponsive__item"><a href="#Services" class="navResponsive__link">Services</a></li>
+                <li class="navResponsive__item"><a href="#artist" class="navResponsive__link">artist</a></li>
+                <li class="navResponsive__item"><a href="#work" class="navResponsive__link">work</a></li>
+                <li class="navResponsive__item"><a href="#contact" class="navResponsive__link">contact</a></li>
+            </ul>
+            <div class="navResponsive__logoBox">
+                <img src="Images/SVG/small.png" alt="" class="navResponsive__nav__logo">
+                <h3 class="navResponsive__nav__logo-text">Belfast</h3>
+            </div>
+        </div>
+    </div>
+
+   
     <script src="JS/script.js"></script>
 </body>
 </html>

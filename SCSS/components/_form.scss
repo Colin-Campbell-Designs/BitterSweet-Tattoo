@@ -23,18 +23,19 @@
     
     &__form-control {
         width: 100%;
+        color: $color-white;
     }
 
     &__input {
         width: 100%;
         border: none;
-        margin-top: 1em;
+        margin: 1em 0;
         border-bottom: 1px solid grey;
         background: transparent;
         outline: transparent;
         padding: 1.2em;
         position: relative;
-        color: $color-white;
+        color: $color-white !important;
 
         &::placeholder {
             color: $color-white;

@@ -5,7 +5,6 @@ const model = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal__close');
 const modalImgCon = document.querySelector('.modal__img-container');
 const form = document.querySelector('.form');
-const inputs = form.querySelectorAll('.form__input');
 
 const name = document.getElementById('name');
 const email = document.getElementById('email');
@@ -75,25 +74,72 @@ function showSucess(input, message){
     small.innerText = message;
 }
 
-
-
-//Check Required
-function checkRequired(){
+function checkrequired(inputArr){
     inputArr.forEach(input => {
-        if(input.value === ''){
-            showError(input, `${input.id} required`)
+        if(input.value.trim() === ''){
+            showError(input,`${getfeildName(input)} is required`);
         }else {
-            showSucess(input, 'Thank you')
+            showSucess(input);
         }
-    })
+    });
 }
 
+function checkLengthName(input, min, max){
+    if(input.value.length < min){
+        showError(input, `${getfeildName(input)} must be at least ${min} characters long `)
+    }else if(input.value.length > max){
+        showError(input, `${getfeildName(input)} must be less than ${max} characters long `)
+    }else {
+        showSucess(input, 'Thank you')
+    }
+}
+
+function checkisValidEmail(input) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if(re.test(String(input.value).toLowerCase())){
+        showSucess(input, 'Thankyou')
+    }else {
+        showError(input, 'That Email is not valid');
+    }
+  }
+
+function checkPhoneNumber(input){
+    const re = /((\+44(\s\(0\)\s|\s0\s|\s)?)|0)7\d{3}(\s)?\d{6}/;
+    if(re.test(input.value)){
+        showSucess(input, 'Thank you');
+    }else {
+         showError(input, 'That phone number is not valid')
+    }
+}
+
+function checkLengthMessage(input, min, max){
+    if(input.value.length < min){
+        showError(input, `Yor message needs to be at least ${min} characters long`);
+    }else if(input.value.length > max){
+        showError(input, `Your message can only be ${max} characters long`)
+    }else {
+        showSucess(input, 'Thankyou');
+    }
+}
+
+
+
+// Get fieldname
+function getfeildName(input){
+    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
+}
+
+// Event listeners
 form.addEventListener('submit', e => {
     e.preventDefault() 
 
-    checkRequired()
-    form.reset()
-       
+    checkrequired(inputArr);
+    checkLengthName(name, 3, 15)
+    checkPhoneNumber(phone)
+    checkisValidEmail(email);
+    checkLengthMessage(messageArea, 10, 600);
+    
+    console.log(messageArea.value.length)
 })
 
 

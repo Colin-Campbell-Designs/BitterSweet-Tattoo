@@ -198,6 +198,191 @@ img {
   transition: all 1s;
 }
 
+.burgerMenu {
+  height: 4em;
+  width: 4em;
+  border: solid 0.2em #ffff;
+  border-radius: .5em;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.burgerMenu:hover .line::before {
+  position: absolute;
+  top: 8px;
+  background-color: #EFC30A;
+}
+
+.burgerMenu:hover .line::after {
+  position: absolute;
+  bottom: 8px;
+  background-color: #EFC30A;
+}
+
+.burgerMenu:hover .line {
+  background-color: #EFC30A;
+}
+
+.burgerMenu .line {
+  width: 70%;
+  height: 6%;
+  background: #ffff;
+  -webkit-transition: all ease .2s;
+  transition: all ease .2s;
+}
+
+.burgerMenu .line::before {
+  content: '';
+  width: 70%;
+  height: 6%;
+  background: #ffff;
+  position: absolute;
+  top: 10px;
+}
+
+.burgerMenu .line::after {
+  content: '';
+  width: 70%;
+  height: 6%;
+  background: #ffff;
+  position: absolute;
+  bottom: 10px;
+  background: #ffff;
+  -webkit-transition: all ease .2s;
+  transition: all ease .2s;
+}
+
+.navResponsive {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: -122em;
+  left: 0;
+  z-index: 99;
+  background-image: url("/Images/3d-grunge-room-interior-with-spotlight-smoky-atmosphere-background.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #ffff;
+}
+
+.navResponsive__container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.navResponsive__list {
+  color: #ffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navResponsive__item {
+  color: #ffff;
+  padding: 1em;
+  margin: 1em;
+  letter-spacing: 1.3rem;
+}
+
+.navResponsive__link {
+  color: #ffff;
+  font-size: 4rem;
+  position: relative;
+}
+
+.navResponsive__link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0%;
+  width: 100%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background: #EFC30A;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.navResponsive__link:hover::before {
+  height: 5%;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.navResponsive__logoBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navResponsive__nav__logo {
+  height: 10em;
+  width: 10em;
+}
+
+.navResponsive__nav__logo-text {
+  font-size: 3rem;
+  color: #EFC30A;
+}
+
+@media (max-width: 800px) {
+  .nav__social {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav__list {
+    display: none;
+  }
+  .nav__social {
+    display: none;
+  }
+}
+
 .footer {
   color: #ffff;
   background: #000000;
@@ -610,18 +795,19 @@ img {
 
 .form__form-control {
   width: 100%;
+  color: #ffff;
 }
 
 .form__input {
   width: 100%;
   border: none;
-  margin-top: 1em;
+  margin: 1em 0;
   border-bottom: 1px solid grey;
   background: transparent;
   outline: transparent;
   padding: 1.2em;
   position: relative;
-  color: #ffff;
+  color: #ffff !important;
 }
 
 .form__input::-webkit-input-placeholder {
