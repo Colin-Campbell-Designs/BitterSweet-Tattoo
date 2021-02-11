@@ -13,7 +13,6 @@
         margin: 0 auto;
         display: flex;
         margin-top: 5em;
-
     }
 
     &__contact {
@@ -102,10 +101,26 @@
     }
 }
 
-@media (max-width: 500px) {
+
+
+@media (max-width: 800px) {
     .footer__container {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-} 
+
+    .footer__contact {
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 4em;
+    }
+
+    .footer__adress-box {
+        margin-top: 2em;
+    }
+
+    .footer__social {
+        margin-top: 4em;
+    }
+}

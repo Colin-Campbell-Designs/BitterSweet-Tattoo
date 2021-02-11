@@ -70,3 +70,17 @@
     visibility: visible;
 }
 
+@media(max-width: 800px){
+    .form {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .contact__container {
+        background:linear-gradient(to right, black, transparent), url('/Images/form_bg.jpg');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+}
+

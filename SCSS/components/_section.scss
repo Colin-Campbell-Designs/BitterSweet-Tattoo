@@ -57,3 +57,40 @@
     background: $color-black;
     height: 15em;
 }
+
+@media (max-width: 900px) {
+    .section__img {
+       margin: auto 0;
+    }
+    .section__text {
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 800px) {
+    .section {
+        padding-top: 3em;
+
+        &__img {
+          max-width: 70em;
+          height: 100%;
+          object-fit: contain;
+          margin: 0 auto;
+
+        }
+    }
+
+    .section-spacer {
+        height: 10em;
+    }
+
+    .res-my {
+        margin-bottom: 3em;
+    }
+
+    .empty {
+        display: none;
+    }
+}
+
+

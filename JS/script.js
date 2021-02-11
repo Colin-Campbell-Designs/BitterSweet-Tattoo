@@ -11,12 +11,34 @@ const email = document.getElementById('email');
 const phone = document.getElementById('number');
 const messageArea = document.getElementById('message');
 
+const burgerMenuButton = document.querySelector('#burgerMenu-btn');
+const navResponsiveItem = document.querySelectorAll('.navResponsive__item');
+const navResponsive = document.querySelector('.navResponsive');
+const closeButton = document.getElementById('closeButton');
+
 
 
 //  Nav
 const backgroundFunction = window.addEventListener('scroll', () => {
     nav.classList.toggle('scroll', window.scrollY > 0)
  });
+
+ //Responsive Nav
+ burgerMenuButton.addEventListener('click', () => {
+    navResponsive.classList.toggle('showNav');
+ });
+ 
+ navResponsiveItem.forEach(item => {
+     item.addEventListener('click', () => {
+        navResponsive.classList.remove('showNav');
+     })
+ })
+
+ closeButton.addEventListener('click', () => {
+    navResponsive.classList.toggle('showNav');
+ })
+
+
 
 
 
