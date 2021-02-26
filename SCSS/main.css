@@ -62,7 +62,6 @@ img {
 }
 
 .main {
-  min-width: 100vw;
   overflow-x: auto;
 }
 
@@ -439,6 +438,18 @@ img {
   }
 }
 
+@media (max-width: 500px) {
+  .navResponsive__link {
+    font-size: 2.5rem;
+  }
+  .navResponsive__nav__logo {
+    font-size: .5rem;
+  }
+  .navResponsive__nav__logo-text {
+    font-size: 2rem;
+  }
+}
+
 .footer {
   color: #ffff;
   background: #000000;
@@ -569,7 +580,7 @@ img {
   width: 100%;
   color: #ffff;
   font-size: 1.6rem;
-  padding: 3em 0 1.5em;
+  padding: 5em 0 1.5em;
 }
 
 @media (max-width: 800px) {

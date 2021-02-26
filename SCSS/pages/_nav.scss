@@ -264,5 +264,19 @@
     }
 }
 
+@media (max-width: 500px){
+    .navResponsive__link {
+        font-size: 2.5rem
+    }
+
+    .navResponsive__nav__logo {
+        font-size: .5rem
+    }
+
+    .navResponsive__nav__logo-text {
+        font-size: 2rem
+    }
+}
+
 
 
