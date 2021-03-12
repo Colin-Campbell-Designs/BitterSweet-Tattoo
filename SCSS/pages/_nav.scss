@@ -3,9 +3,14 @@
     padding: 2em;
     position: fixed;
     z-index: 10;
-    background-image: transparent;
+    opacity: 0;
 
-    transition: all 1s;    
+    &__scroll{
+        background-image: linear-gradient(to bottom, black 25%, transparent);
+        height: 10%;
+        opacity: 1;
+        transition: all .5s;
+} 
 
 
     &__logoBox {
@@ -74,10 +79,7 @@
 
 
 
-.scroll {
-   background-image: linear-gradient(to bottom, black 25%, transparent);
-   transition: all 1s;
-}
+
 
 .burgerMenu {
     height: 4em;

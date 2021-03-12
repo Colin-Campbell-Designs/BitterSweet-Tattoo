@@ -16,7 +16,8 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
-  background-image: url("/Images/body_bg.jpg");
+  background-image: url("/BitterSweet-Tattoo/Images/body_bg.jpg");
+  height: 100vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -137,9 +138,16 @@ img {
   padding: 2em;
   position: fixed;
   z-index: 10;
-  background-image: transparent;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  opacity: 0;
+}
+
+.nav__scroll {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(25%, black), to(transparent));
+  background-image: linear-gradient(to bottom, black 25%, transparent);
+  height: 10%;
+  opacity: 1;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 .nav__logoBox {
@@ -214,13 +222,6 @@ img {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   color: #EFC30A;
-}
-
-.scroll {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(25%, black), to(transparent));
-  background-image: linear-gradient(to bottom, black 25%, transparent);
-  -webkit-transition: all 1s;
-  transition: all 1s;
 }
 
 .burgerMenu {
@@ -853,13 +854,13 @@ img {
   margin: 2em 2em 6em;
   text-align: center;
   border-radius: .5em;
+  -webkit-transition: ease all .3s;
+  transition: ease all .3s;
 }
 
 .card:hover {
-  -webkit-transform: translateY(-1em);
-          transform: translateY(-1em);
-  -webkit-transition: ease all .3s;
-  transition: ease all .3s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .card__icon {

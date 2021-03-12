@@ -19,8 +19,8 @@ const closeButton = document.getElementById('closeButton');
 
 
 //  Nav
-const backgroundFunction = window.addEventListener('scroll', () => {
-    nav.classList.toggle('scroll', window.scrollY > 0)
+    window.addEventListener('scroll', () => {
+    nav.classList.toggle('nav__scroll', window.scrollY > 0)
  });
 
  //Responsive Nav
