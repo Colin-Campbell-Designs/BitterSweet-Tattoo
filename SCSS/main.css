@@ -876,7 +876,8 @@ img {
 }
 
 .contact__container {
-  background-image: url("/Images/form_bg.jpg"), black;
+  background-image: url("Images/form_bg.jpg");
+  background-color: black;
   background-position: center;
   background-size: cover;
   display: -webkit-box;
@@ -971,8 +972,8 @@ img {
     margin: 0 auto;
   }
   .contact__container {
-    background: -webkit-gradient(linear, left top, right top, from(black), to(transparent)), url("/Images/form_bg.jpg");
-    background: linear-gradient(to right, black, transparent), url("/Images/form_bg.jpg");
+    background: -webkit-gradient(linear, left top, right top, from(black), to(transparent)), url("Images/form_bg.jpg");
+    background: linear-gradient(to right, black, transparent), url("Images/form_bg.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
