@@ -298,7 +298,7 @@ img {
   top: -100%;
   left: 0;
   z-index: 99;
-  background-image: url("/Images/responiveNav-BG.jpg");
+  background-image: url("Images/responiveNav-BG.jpg");
   background-size: cover;
   background-position: center;
   color: #ffff;
