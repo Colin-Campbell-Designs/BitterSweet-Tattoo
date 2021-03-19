@@ -876,7 +876,7 @@ img {
 }
 
 .contact__container {
-  background: url("/Images/form_bg.jpg");
+  background: url("/Images/form_bg.jpg"), black;
   background-position: center;
   background-size: cover;
   display: -webkit-box;
